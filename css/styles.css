@@ -101,6 +101,8 @@ h2 {
   padding: 0;
 }
 
+
+
 nav > ul > li > .menu {
   text-decoration: none;
   color: #212121;
@@ -110,6 +112,21 @@ nav > ul > li > .menu {
   letter-spacing: 0.28px;
 }
 
+.nav-header .menu .link {
+  position: relative;
+}
+
+.nav-header .menu .active-link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -32px;
+  background: var(--link-color-hover);
+  border-radius: 2px;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -117,6 +134,10 @@ ul {
 }
 
 .link:hover {
+  color: var(--link-color-hover);
+}
+
+.nav-header .menu .active-link {
   color: var(--link-color-hover);
 }
 
